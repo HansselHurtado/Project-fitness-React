@@ -1,9 +1,28 @@
 import React from 'react'
 import personImg from '../images/exercise.png'
 import circleImg from '../images/circles.png'
+import personImg2 from '../images/person.png'
 import './styles/Card.css'
 
 class Card extends React.Component {
+
+    // constructor
+    constructor(props){
+        super(props)
+        this.state = {
+            image: personImg2
+        }
+    }
+
+    // método para actulizar los datos del estado
+    componentDidMount(){
+        setTimeout(() => {
+            this.setState({
+                image: personImg
+            })
+        }, 5000);
+    }
+
     render(){
         // pasandole al array las props
         const {title, description, img, leftColor, rigthtColor} = this.props 
