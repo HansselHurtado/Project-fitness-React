@@ -1,11 +1,13 @@
-import Reeact from 'react'
+import React from 'react'
 import './styles/More.css'
+import Add from '../images/add.png'
+import { Link } from 'react-router-dom'
 
-const More = props => {
+const More = () => {
     return(
-        <div>
-            <img src={props.image} className="mt-5 mb-5 img"/>
-        </div>
+        <Link to="/exercise/new">
+            <img src={Add} className="mt-5 mb-5 img" alt="exercise"/>
+        </Link>
     )
 }
 
